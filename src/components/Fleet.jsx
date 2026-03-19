@@ -5,7 +5,7 @@ import { ChevronLeft, ChevronRight, Gauge, Users, Truck, Star, ArrowRight, MapPi
 
 gsap.registerPlugin(ScrollTrigger);
 
-const timerRef = useRef(null);
+
 
 const fleet = [
   {
@@ -227,7 +227,7 @@ export default function Fleet() {
   const sectionRef = useRef(null);
   const titleRef   = useRef(null);
   const trackRef   = useRef(null);
-
+  const timerRef = useRef(null);
   const total = fleet.length;
 
   useEffect(() => {
