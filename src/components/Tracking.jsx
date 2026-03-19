@@ -137,7 +137,7 @@ export default function Tracking() {
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 16 }}>
                 <div>
                   <div style={{ fontSize: '0.7rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.08em', color: 'var(--ink-muted)', marginBottom: 4 }}>Shipment #TV-48219-IN</div>
-                  <h3 style={{ fontFamily: 'var(--font-display)', fontWeight: 800, fontSize: '1.2rem', letterSpacing: '-0.03em' }}>Los Angeles → Bengaluru</h3>
+                  <h3 style={{ fontFamily: 'var(--font-display)', fontWeight: 800, fontSize: '1.2rem', letterSpacing: '-0.03em' }}>Mumbai → Bengaluru</h3>
                 </div>
                 <span style={{ display: 'flex', alignItems: 'center', gap: 5, padding: '5px 12px', borderRadius: '100px', background: 'rgba(15,118,110,0.08)', border: '1px solid rgba(15,118,110,0.2)', fontSize: '0.7rem', fontWeight: 700, color: '#0f766e' }}>
                   <div style={{ width: 5, height: 5, borderRadius: '50%', background: '#0f766e' }} /> In Transit

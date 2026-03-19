@@ -5,6 +5,8 @@ import { ChevronLeft, ChevronRight, Gauge, Users, Truck, Star, ArrowRight, MapPi
 
 gsap.registerPlugin(ScrollTrigger);
 
+const timerRef = useRef(null);
+
 const fleet = [
   {
     name: 'ProHaul XL 18-Wheeler',
@@ -244,10 +246,23 @@ export default function Fleet() {
     return () => ctx.revert();
   }, []);
 
+  useEffect(() => {
+  timerRef.current = setInterval(() => {
+    setCurrent(c => (c + 1) % total);
+  }, 5000);
+    return () => clearInterval(timerRef.current);
+  }, [total]);
+
+
   const goTo = useCallback((idx) => {
     if (locked) return;
     setLocked(true);
     setCurrent(((idx % total) + total) % total);
+    // Reset the 5s timer so it doesn't fire immediately after a manual click
+    clearInterval(timerRef.current);
+    timerRef.current = setInterval(() => {
+      setCurrent(c => (c + 1) % total);
+    }, 5000);
     setTimeout(() => setLocked(false), 500);
   }, [locked, total]);
 
